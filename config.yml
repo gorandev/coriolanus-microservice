@@ -1,5 +1,5 @@
 twitter:
   bearer_token: "AAAAAAAAAAAAAAAAAAAAAFrObAEAAAAAgoBzlYiUpWYLER3eWD9lNV28xis%3D1utZwEaB3CupbBXzfb9yrAiAgNdZoiTaebqwEY9ikNReZQVsGf"
   search_url: "https://api.twitter.com/2/tweets/search/recent"
-  max_tweets: 15
+  max_tweets: 10
 
