@@ -1,5 +1,7 @@
 # ruby-tweet-microservice
 
+# the microservice use a database in sqlite3 for save 10 tweets by topic
+
 #git clone https://gitlab.com/EosWeb/ruby-tweet-microservice.git
 
 Dockerfile
@@ -26,6 +28,12 @@ microservice.sh
 docker run -it \
     -v <path_of_project>/ruby-tweet-microservice:/usr/src/microservice \
     -w /usr/src/microservice app:latest bash
+```
+
+First time Run migrations
+```
+# sh microservice.sh
+# rake db:migrate
 ```
 
 get Tweets
