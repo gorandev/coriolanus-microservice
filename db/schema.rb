@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_08_131551) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_07_145733) do
+  create_table "topics", force: :cascade do |t|
+    t.text "name"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
+  end
+
   create_table "tweets", force: :cascade do |t|
     t.string "autor_id", null: false
     t.text "text"
-    t.string "topic"
+    t.string "lang"
+    t.integer "topic_id"
     t.text "attachments"
+    t.string "conversation_id"
     t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
   end

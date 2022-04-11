@@ -3,11 +3,21 @@ class CreateTableTweets < ActiveRecord::Migration[7.0]
     create_table :tweets do |t|
       t.string :autor_id, null: false
       t.text :text
-      t.string :topic
+      t.string  :lang
+      t.integer :topic_id
       t.text :attachments
+      t.string :conversation_id
       t.timestamp :created_at
       t.timestamp :updated_at
     end
+
+    create_table :topics do |t|
+      t.text :name
+      t.timestamp :created_at
+      t.timestamp :updated_at
+    end
+
+
   end
 
   def down

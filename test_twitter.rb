@@ -12,7 +12,7 @@ class TestTwitter < Minitest::Test
 
   def test_create_query
     topic = "nasa"
-    assert_equal "#{topic} has:mentions", @twitter.create_query(topic)
+    assert_equal "#{topic} (has:mentions OR -is:retweet)", @twitter.create_query(topic)
   end
 
   def test_obtain_tweets

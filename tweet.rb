@@ -1,8 +1,13 @@
 require 'active_record'
 
+class Topic < ActiveRecord::Base
+  establish_connection adapter: "sqlite3", database: "db/development.sqlite3"
+  has_many  :tweets, dependent: :destroy
+end
+
 class Tweet < ActiveRecord::Base
     establish_connection adapter: "sqlite3", database: "db/development.sqlite3"
-
+    belongs_to :topic
 end
 
 =begin
