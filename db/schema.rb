@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_07_145733) do
   end
 
   create_table "tweets", force: :cascade do |t|
-    t.string "autor_id", null: false
+    t.string "author_id", null: false
     t.text "text"
     t.string "lang"
     t.integer "topic_id"

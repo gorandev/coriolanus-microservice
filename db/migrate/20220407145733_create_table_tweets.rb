@@ -1,7 +1,7 @@
 class CreateTableTweets < ActiveRecord::Migration[7.0]
   def up
     create_table :tweets do |t|
-      t.string :autor_id, null: false
+      t.string :author_id, null: false
       t.text :text
       t.string  :lang
       t.integer :topic_id

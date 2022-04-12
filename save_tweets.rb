@@ -36,7 +36,7 @@ class SaveTweets
     def save
         @response["data"].each do |tweet|
             storage = Tweet.new
-            storage.autor_id = tweet["author_id"] || "empty"
+            storage.author_id = tweet["author_id"] || "empty"
             storage.lang = tweet["lang"] || "empty"
             storage.topic = @topic
             storage.attachments = tweet["attachments"]
